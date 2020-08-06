@@ -1,0 +1,14 @@
+package starwarspackage;
+syntax = "proto3";
+
+message StarwarsPersonMessage {
+    enum Gender {
+        female = 0;
+        male = 1;
+    };
+    required string name = 1;
+    required int32 height = 2;
+    required int32 mass = 3;
+    required string birth_year = 4;
+    required Gender gender = 5  [default = male];
+}
